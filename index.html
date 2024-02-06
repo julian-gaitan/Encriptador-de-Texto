@@ -4,15 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
     <title>Encriptador de Texto</title>
 </head>
-<body>
-    <textarea id="input" cols="30" rows="10"></textarea>
-    <br>
-    <button id="encrypt">Encriptar</button>
-    <button id="decrypt">Desencriptar</button>
-    <p id="output"></p>
+<body class="theme-blue">
+    <main>
+        <div id="logo">
+            <img src="img/logo-blue.png" class="theme-logo-blue" alt="logo">
+            <img src="img/logo-red.png" class="theme-logo-red opacity-0" alt="logo">
+            <img src="img/logo-green.png" class="theme-logo-green opacity-0" alt="logo">
+        </div>
+        <div id="theme-container">
+            <input type="radio" id="blue" name="theme" value="blue" checked/>
+            <label for="blue"></label>
+            <input type="radio" id="red" name="theme" value="red" />
+            <label for="red"></label>
+            <input type="radio" id="green" name="theme" value="green" />
+            <label for="green"></label>
+        </div>
+        <section>
+            <div id="input-container" class="">
+                <textarea id="input" class="theme-input-blue" placeholder="Ingrese el texto aquí">
+                </textarea>
+                <p id="warning">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                    <path fill="#495057" d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M9 5v6h2V5zm0 8v2h2v-2z"/>
+                </svg>
+                Solo letras minúsculas y sin acentos</p>
+                <div id="button-container" class="">
+                    <button id="encrypt" class="theme-encrypt-blue">Encriptar</button>
+                    <button id="decrypt" class="theme-decrypt-blue">Desencriptar</button>
+                </div>
+            </div>
+            <div id="output-container" class="">
+                <div id="message" class="d-none">
+                    <textarea id="output" class="" readonly></textarea>
+                    <button id="copy" class="theme-copy-blue">Copiar</button>
+                </div>
+                <div id="no-message">
+                    <div id="doll">
+                        <img src="img/doll-blue.png" class="theme-doll-blue" alt="sin mensaje">
+                        <img src="img/doll-red.png" class="theme-doll-red opacity-0" alt="sin mensaje">
+                        <img src="img/doll-green.png" class="theme-doll-green opacity-0" alt="sin mensaje">
+                    </div>
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="app.js"></script>
 </body>
 </html>

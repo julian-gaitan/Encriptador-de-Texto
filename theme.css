@@ -1,0 +1,125 @@
+
+/* THEMES */
+
+:root {
+    /* BLUE */
+    --blue-bg: #F3F5FC;
+    --blue-dark-bg: #D8DFE8;
+    --blue-color: #0A3871;
+    /* RED */
+    --red-bg: #FCF3F5;
+    --red-dark-bg: #E8D8DF;
+    --red-color: #710A38;
+    /* GREEN */
+    --green-bg: #F5FCF3;
+    --green-dark-bg: #DFE8D8;
+    --green-color: #38710A;
+}
+
+#theme-container input#blue:checked + label {
+	background-color: var(--blue-color);
+}
+
+#theme-container input#red:checked + label {
+	background-color: var(--red-color);
+}
+
+#theme-container input#green:checked + label {
+	background-color: var(--green-color);
+}
+
+.theme-blue {
+    background-color: var(--blue-bg);
+    color: var(--blue-color);
+}
+
+.theme-input-blue {
+    background-color: var(--blue-bg);
+    color: var(--blue-color);
+}
+
+.theme-input-blue:focus {
+    outline: 1px solid var(--blue-color);
+}
+
+.theme-encrypt-blue {
+    background-color: var(--blue-color);
+    color: white;
+    border-color: var(--blue-color);
+}
+
+.theme-decrypt-blue {
+    background-color: var(--blue-dark-bg);
+    color: var(--blue-color);
+    border-color: var(--blue-color);
+}
+
+.theme-copy-blue {
+    background-color: white;
+    color: var(--blue-color);
+    border-color:var(--blue-color);
+}
+
+.theme-red {
+    background-color: var(--red-bg);
+    color: var(--red-color);
+}
+
+.theme-input-red {
+    background-color: var(--red-bg);
+    color: var(--red-color);
+}
+
+.theme-input-red:focus {
+    outline: 1px solid var(--red-color);
+}
+
+.theme-encrypt-red {
+    background-color: var(--red-color);
+    color: white;
+    border-color: var(--red-color);
+}
+
+.theme-decrypt-red {
+    background-color: var(--red-dark-bg);
+    color: var(--red-color);
+    border-color: var(--red-color);
+}
+
+.theme-copy-red {
+    background-color: white;
+    color: var(--red-color);
+    border-color:var(--red-color);
+}
+
+.theme-green {
+    background-color: var(--green-bg);
+    color: var(--green-color);
+}
+
+.theme-input-green {
+    background-color: var(--green-bg);
+    color: var(--green-color);
+}
+
+.theme-input-green:focus {
+    outline: 1px solid var(--green-color);
+}
+
+.theme-encrypt-green {
+    background-color: var(--green-color);
+    color: white;
+    border-color: var(--green-color);
+}
+
+.theme-decrypt-green {
+    background-color: var(--green-dark-bg);
+    color: var(--green-color);
+    border-color: var(--green-color);
+}
+
+.theme-copy-green {
+    background-color: white;
+    color: var(--green-color);
+    border-color:var(--green-color);
+}
