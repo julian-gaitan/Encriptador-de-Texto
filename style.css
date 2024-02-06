@@ -85,6 +85,12 @@ path {
     transition: opacity 1s;
 }
 
+#repo {
+    position: absolute;
+    left: calc(7% - 16px);
+    bottom: 48px;
+}
+
 #theme-container {
     width: 120px;
     height: 40px;
@@ -230,6 +236,11 @@ path {
         left: 6%;
     }
 
+    #repo {
+        top: calc(48px + 6px);
+        left: calc(100% - 6% - 32px);
+    }
+
     #theme-container {
         left: calc(6% + 120px);
         top: calc(48px + 4px);
@@ -256,7 +267,7 @@ path {
         margin: 2%;
     }
 
-    #no-message img {
+    #no-message #doll {
         display: none;
     }
 }
@@ -268,6 +279,10 @@ path {
     }
 
     #theme-container {
+        top: 32px;
+    }
+
+    #repo {
         top: 32px;
     }
 
