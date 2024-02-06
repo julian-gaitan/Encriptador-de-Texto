@@ -12,10 +12,13 @@ const cipher = {
     "u": "ufat",
 }
 
+const maxwell = new Audio('img/maxwell.mp3');
+
 encrypt.addEventListener('click', encryptClick);
 decrypt.addEventListener('click', decryptClick);
 
 function encryptClick(event) {
+    if (!input.value) return;
     let inputText = input.value;
     let outputText = "";
     for (let i = 0; i < inputText.length; i++) {
@@ -26,13 +29,36 @@ function encryptClick(event) {
             outputText += char;
         }
     }
-    output.textContent = outputText;
+    output.value = outputText;
+    document.getElementById('caption').innerText = 'Texto Encriptado';
+    openModal();
+    maxwell.play();
 }
 
 function decryptClick(event) {
-    let outputText = input.value;
+    if (!output.value) return;
+    let inputText = output.value;
     for (const [key, value] of Object.entries(cipher)) {
-        outputText = outputText.replaceAll(value, key);
+        inputText = inputText.replaceAll(value, key);
     }
-    output.textContent = outputText;
+    input.value = inputText;
+    document.getElementById('caption').innerText = 'Texto Desencriptado';
+    openModal();
+    maxwell.play();
+}
+
+/* MODAL */
+
+const modal = document.querySelector("#myModal");
+
+document.querySelector('button.close').addEventListener('click', closeModal);
+
+function openModal() {
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    modal.style.display = "none";
+    maxwell.pause();
+    maxwell.currentTime = 0;
 }

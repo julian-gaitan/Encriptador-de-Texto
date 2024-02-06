@@ -3,16 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Encriptador de Texto</title>
 </head>
 <body>
-    <textarea id="input" cols="30" rows="10"></textarea>
-    <br>
-    <button id="encrypt">Encriptar</button>
-    <button id="decrypt">Desencriptar</button>
-    <p id="output"></p>
+    <div id="container">
+        <table>
+            <tr style="line-height: 10px;">
+                <th colspan="3">
+                    <h1>Encriptador de Texto</h1>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <textarea id="input"></textarea>
+                        <br>
+                        <button id="encrypt">Encriptar</button>
+                    </div>
+                </td>
+                <td></td>
+                <td>
+                    <div class="container">
+                        <textarea id="output"></textarea>
+                        <br>
+                        <button id="decrypt">Desencriptar</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-box">
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" src="img/tunnelz.gif">
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+            <!-- The Close Button -->
+            <button class="close">okey</button>
+        </div>
+      </div>
     <script src="app.js"></script>
 </body>
 </html>
