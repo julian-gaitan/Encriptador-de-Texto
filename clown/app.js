@@ -19,7 +19,12 @@ decrypt.addEventListener('click', decryptClick);
 
 function encryptClick(event) {
     if (!input.value) return;
-    let inputText = input.value;
+    let inputText = input.value.toLowerCase()
+                                .replaceAll('á', 'a')
+                                .replaceAll('é', 'e')
+                                .replaceAll('í', 'i')
+                                .replaceAll('ó', 'o')
+                                .replaceAll('ú', 'u');;
     let outputText = "";
     for (let i = 0; i < inputText.length; i++) {
         let char = inputText.charAt(i);
@@ -37,7 +42,12 @@ function encryptClick(event) {
 
 function decryptClick(event) {
     if (!output.value) return;
-    let inputText = output.value;
+    let inputText = output.value.toLowerCase()
+                                .replaceAll('á', 'a')
+                                .replaceAll('é', 'e')
+                                .replaceAll('í', 'i')
+                                .replaceAll('ó', 'o')
+                                .replaceAll('ú', 'u');;
     for (const [key, value] of Object.entries(cipher)) {
         inputText = inputText.replaceAll(value, key);
     }
